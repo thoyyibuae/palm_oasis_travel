@@ -104,7 +104,24 @@ class _VisaFormScreenState extends State<VisaFormScreen> {
                   children: [
                     // HtmlWidget(_visaRequirement!.text ?? "")
 
-                    Center(child: Text("------ Application Form1 -----")),
+                    Center(child: ElevatedButton(
+
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.blue[400],
+                        padding: EdgeInsets.zero,
+                        elevation: 0,
+                      ),
+
+                      onPressed: () {
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text('Application Form1', style: TextStyle(color: Colors.white),),
+
+                        ],
+                      ),
+                    ),),
                     SizedBox(height: 18,),
                     Container(
                     
@@ -439,7 +456,24 @@ class _VisaFormScreenState extends State<VisaFormScreen> {
                       ),
                     ),
                     SizedBox(height: 18,),
-                    Center(child: Text("------ Contact Details -----")),
+                    Center(child: ElevatedButton(
+
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.blue[400],
+                        padding: EdgeInsets.zero,
+                        elevation: 0,
+                      ),
+
+                      onPressed: () {
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text('Contact Details', style: TextStyle(color: Colors.white),),
+
+                        ],
+                      ),
+                    ),),
 
                     SizedBox(height: 18,),
 
