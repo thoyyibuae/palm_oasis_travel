@@ -107,8 +107,7 @@ class _VisaFormScreenState extends State<VisaFormScreen> {
                     Center(child: Text("------ Application Form1 -----")),
                     SizedBox(height: 18,),
                     Container(
-                      // width: 270,
-                      height: 53,
+                    
                       child: TextFormField(
                         controller: firstNameController,
                         textAlignVertical: TextAlignVertical.center,
@@ -130,8 +129,7 @@ class _VisaFormScreenState extends State<VisaFormScreen> {
                     ),
                     SizedBox(height: 8,),
                     Container(
-                      // width: 270,
-                      height: 53,
+                   
                       child: TextFormField(
                         controller: midNameController,
                         textAlignVertical: TextAlignVertical.center,
@@ -154,7 +152,6 @@ class _VisaFormScreenState extends State<VisaFormScreen> {
                     SizedBox(height: 8,),
                     Container(
                       // width: 270,
-                      height: 53,
                       child: TextFormField(
                         controller: lastNameController,
                         textAlignVertical: TextAlignVertical.center,
@@ -178,7 +175,6 @@ class _VisaFormScreenState extends State<VisaFormScreen> {
                     SizedBox(height: 8,),
                     Container(
                       // width: 270,
-                      height: 53,
                       child: TextFormField(
                         controller: motherNameController,
                         textAlignVertical: TextAlignVertical.center,
@@ -201,7 +197,6 @@ class _VisaFormScreenState extends State<VisaFormScreen> {
                     SizedBox(height: 8,),
                     Container(
 
-                        height: 53,
                       padding: EdgeInsets.symmetric(
                         horizontal: 10,
                       ),
@@ -309,7 +304,7 @@ class _VisaFormScreenState extends State<VisaFormScreen> {
                     SizedBox(height: 8,),
                     Container(
                       // width: 270,
-                      height: 53,
+                      
                       child: TextFormField(
                         controller: religionController,
                         textAlignVertical: TextAlignVertical.center,
@@ -331,7 +326,6 @@ class _VisaFormScreenState extends State<VisaFormScreen> {
                     ),
                     SizedBox(height: 8,),
                     Container(
-                      height: 53,
                       child: TextFormField(
 
                         decoration: new InputDecoration(
@@ -373,11 +367,11 @@ class _VisaFormScreenState extends State<VisaFormScreen> {
                           }
                           return null;
                         },
+
                       ),
                     ),
                     SizedBox(height: 8,),
                     Container(
-                      height: 53,
                       child: TextFormField(
 
                         decoration: new InputDecoration(
@@ -424,7 +418,7 @@ class _VisaFormScreenState extends State<VisaFormScreen> {
                     SizedBox(height: 8,),
                     Container(
                       // width: 270,
-                      height: 53,
+                      
                       child: TextFormField(
                         controller: lastNameController,
                         textAlignVertical: TextAlignVertical.center,
@@ -451,7 +445,7 @@ class _VisaFormScreenState extends State<VisaFormScreen> {
 
                     Container(
                       // width: 270,
-                      height: 53,
+                      
                       child: TextFormField(
                         controller: mobileNumberController,
                         textAlignVertical: TextAlignVertical.center,
@@ -475,7 +469,7 @@ class _VisaFormScreenState extends State<VisaFormScreen> {
                     SizedBox(height: 10,),
                     Container(
                       // width: 270,
-                      height: 53,
+                      
                       child: TextFormField(
                         controller: countryController,
                         textAlignVertical: TextAlignVertical.center,
@@ -499,7 +493,7 @@ class _VisaFormScreenState extends State<VisaFormScreen> {
                     SizedBox(height: 10,),
                     Container(
                       // width: 270,
-                      height: 53,
+                      
                       child: TextFormField(
                         controller: emailController,
                         textAlignVertical: TextAlignVertical.center,
@@ -522,7 +516,7 @@ class _VisaFormScreenState extends State<VisaFormScreen> {
                     SizedBox(height: 10,),
                     Container(
                       // width: 270,
-                      height: 53,
+                      
                       child: TextFormField(
                         controller: uaeNumberController,
                         textAlignVertical: TextAlignVertical.center,
@@ -546,7 +540,7 @@ class _VisaFormScreenState extends State<VisaFormScreen> {
                     SizedBox(height: 10,),
                     Container(
                       // width: 270,
-                      height: 53,
+                      
                       child: TextFormField(
                         controller: contactPersonController,
                         textAlignVertical: TextAlignVertical.center,

@@ -80,14 +80,14 @@ class _VisaRequirementScreenState extends State<VisaRequirementScreen> {
           : Column(
               children: [
                 SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
                 Container(
-                  height: MediaQuery.of(context).size.height / 1.2,
+                  height: MediaQuery.of(context).size.height * 0.75,
                   width: MediaQuery.of(context).size.width * 2,
                   // padding: const EdgeInsets.all(10.0),
                   child: Card(
-                    elevation: 6,
+                    elevation: 1,
                     child: Container(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -202,12 +202,13 @@ class _VisaRequirementScreenState extends State<VisaRequirementScreen> {
                           Expanded(
                             child: Container(
                               padding:
-                                  const EdgeInsets.symmetric(horizontal: 20.0),
-                              height: MediaQuery.of(context).size.height / 9,
+                                  const EdgeInsets.symmetric(horizontal: 20.0,vertical: 50),
+
+                              // height: MediaQuery.of(context).size.height / 9,
                               child: Container(
                                 padding: const EdgeInsets.symmetric(
                                     horizontal: 30.0),
-                                height: MediaQuery.of(context).size.height / 9,
+                                // height: MediaQuery.of(context).size.height / 9,
 
                                 decoration: BoxDecoration(
                                     borderRadius:
@@ -244,12 +245,7 @@ class _VisaRequirementScreenState extends State<VisaRequirementScreen> {
                                               // margin: EdgeInsets.symmetric(horizontal: 10),
                                               padding: EdgeInsets.symmetric(
                                                   horizontal: 10, vertical: 0),
-                                              // decoration: BoxDecoration(
-                                              //   color: Colors.transparent,
-                                              //   borderRadius: BorderRadius.circular(40),
-                                              //   border:
-                                              //   Border.all(color: Colors.black38, width: 1),
-                                              // ),
+
                                               child:
                                                   DropdownButtonHideUnderline(
                                                 child: DropdownButton2(
@@ -306,7 +302,6 @@ class _VisaRequirementScreenState extends State<VisaRequirementScreen> {
                                                               _selectedAdultCount -
                                                                   count;
 
-
                                                       totalAmt = totalAmt -
                                                           double.parse(
                                                                   _selectedAdultCount
@@ -339,7 +334,7 @@ class _VisaRequirementScreenState extends State<VisaRequirementScreen> {
 
                                                   iconEnabledColor:
                                                       Colors.black,
-                                                  
+
                                                   buttonPadding:
                                                       const EdgeInsets.only(
                                                           left: 14, right: 14),
@@ -691,115 +686,96 @@ class _VisaRequirementScreenState extends State<VisaRequirementScreen> {
                             ),
                           ),
 
-                          Expanded(
-                            child: Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                // height: 100,
-                                height: MediaQuery.of(context).size.height / 12,
-                                decoration: BoxDecoration(
-                                  color: Colors.blue,
-                                  // borderRadius: BorderRadius.only(
-                                  //   topLeft: Radius.circular(25),
-                                  //   topRight: Radius.circular(25),
-                                  // ),
-                                ),
-                                // margin: EdgeInsets.only(
-                                //   top: 10.0,
-                                // ),
-                                padding: EdgeInsets.symmetric(horizontal: 20),
-                                child: Column(
-                                  // mainAxisAlignment: MainAxisAlignment.center,
-                                  children: <Widget>[
-                                    // SizedBox(height: 1,),
-
-                                    Container(
-                                      child: Row(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.end,
-                                        children: [
-                                          Text(
-                                            "$count PERSON",
-                                            style:
-                                                TextStyle(color: Colors.white),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    Row(
-                                      // mainAxisAlignment: MainAxisAlignment.end,
-                                      children: [
-                                        Expanded(
-                                            flex: 2,
-                                            child: Text(
-                                              "$totalAmt AED",
-                                              style: TextStyle(
-                                                  color: Colors.white),
-                                            )),
-                                        Expanded(flex: 1, child: Container()),
-                                        Expanded(
-                                          flex: 2,
-                                          child: TextButton(
-                                              onPressed: () {
-                                                Navigator.push(context, MaterialPageRoute
-                                                  (builder: (context)=>
-
-                                                VisaFormScreen(visaType: widget.visaType,
-                                                    visaNationality: widget.visaNationality,
-                                                personCount: count,)));
-                                              },
-                                              style: ButtonStyle(
-                                                backgroundColor:
-                                                    MaterialStateProperty
-                                                        .resolveWith<Color>(
-                                                  (Set<MaterialState> states) {
-                                                    if (states.contains(
-                                                        MaterialState.pressed))
-                                                      return Theme.of(context)
-                                                          .colorScheme
-                                                          .primary
-                                                          .withOpacity(0.5);
-                                                    return Colors.blue;
-                                                  },
-                                                ),
-                                              ),
-                                              child: Text(
-                                                "Apply Now",
-                                                style: TextStyle(
-                                                    color: Colors.white),
-                                              )),
-                                        ),
-                                        Expanded(
-                                          flex: 1,
-                                          child: IconButton(
-                                            icon: Icon(
-                                              Icons.arrow_right_outlined,
-                                              size: 35,
-                                              color: Colors.white,
-                                            ),
-                                            onPressed: () {
-
-                                              Navigator.push(context, MaterialPageRoute
-                                                (builder: (context)=>
-
-                                                  VisaFormScreen(visaType: widget.visaType,
-                                                    visaNationality: widget.visaNationality,
-                                                    personCount: count,)));
-                                            },
-                                          ),
-                                        )
-                                      ],
-                                    )
-                                  ],
-                                ),
-                              ),
-                            ),
-                          )
                         ],
                       ),
                     ),
                     margin: EdgeInsets.symmetric(horizontal: 20),
                   ),
+                ),
+                Expanded(
+                  child: Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Container(
+                      margin: EdgeInsets.symmetric(horizontal: 20),
+
+                      height: MediaQuery.of(context).size.height / 12,
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(5.0)
+
+                      ),
+
+                      padding: EdgeInsets.symmetric(horizontal: 10,vertical: 8),
+                      child: Flexible(
+                        child: Row(
+                          // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          // crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Expanded(
+                              child: Container(
+                                width: MediaQuery.of(context).size.width * 0.60,
+
+
+                                child: Text(
+                                  "$count PERSON \n $totalAmt AED",
+                                  style: TextStyle(
+                                      color: Colors.white),
+                                ),
+                              ),
+                            ),
+
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Container(
+                                  padding: EdgeInsets.zero,
+
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(60.0),
+                                  ),
+
+                                  child: ElevatedButton(
+
+                                    style: ElevatedButton.styleFrom(
+
+                                      padding: EdgeInsets.zero,
+                                      elevation: 0,
+                                    ),
+
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  VisaFormScreen(
+                                                    visaType: widget
+                                                        .visaType,
+                                                    visaNationality:
+                                                    widget
+                                                        .visaNationality,
+                                                    personCount:
+                                                    count,
+                                                  )));
+                                    },
+                                    child: Row(
+                                      children: <Widget>[
+                                        Text('Apply Now', style: TextStyle(color: Colors.white),),
+                                        Icon(Icons.play_arrow, color: Colors.white,),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 15,
                 ),
               ],
             ),
